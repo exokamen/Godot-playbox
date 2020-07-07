@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Arrow.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.07758, 2.09486 )
+
+[node name="Arrow" type="KinematicBody2D"]
+position = Vector2( 398.31, 201.083 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.332186, 0.0355377, 0.535156, 1 )
+light_mask = 790275
+position = Vector2( -0.459663, -0.270752 )
+scale = Vector2( 0.99285, 0.0714498 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 28.234, -0.392868 )
+shape = SubResource( 1 )
+
+[node name="ArrowArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowArea"]
+position = Vector2( 28.2339, -0.483704 )
+shape = SubResource( 1 )
+
