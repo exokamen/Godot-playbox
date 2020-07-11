@@ -24,7 +24,7 @@ func _process(delta):
 	
 func hit(object):
 	if object.name == 'EnemyArea':
-		print('Arrow: nailed it!')
+		print('Arrow: Nailed it!')
 		#queue_free()
 
 func set_initial_motion(m):

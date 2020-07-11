@@ -32,6 +32,7 @@ shape = SubResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Walls" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Wall" type="StaticBody2D" parent="Walls"]
 editor/display_folded = true

@@ -12,7 +12,7 @@ var reloading = 0.0
 export var speed = 200
 export var jump_force = -500
 export var gravity = 20
-export var arrow_speed = 700 
+export var arrow_speed = 1000 
 export var shot_body_offset = 60
 
 func _ready():
@@ -52,9 +52,9 @@ func player_shoots():
 		
 		## create the arrow (outside the Player):
 		var arrow_node = arrow_scene.instance()
-		arrow_node.set_position(global_position + 60 * direction)
+		arrow_node.set_position(global_position + shot_body_offset * direction)
 		## Give the arrow initial velocity and make it look the right way
-		arrow_node.look_at(aim_position)
+		#arrow_node.look_at(aim_position)
 		arrow_node.set_initial_motion(arrow_velocity)
 		## Add the arrow to the World scene: 
 		get_parent().add_child(arrow_node)
@@ -65,5 +65,6 @@ func hit(object):
 	# die 
 	if object.name == 'EnemyArea':
 		modulate.a = 0.2
+	print('Player: FFFFFFFFFFFFFFFFFFFFFF')
 	#queue_free()
 	
